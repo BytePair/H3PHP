@@ -12,6 +12,13 @@ if (!function_exists('header_loaded')) {
     </header>
 
     <!-- Footer -->
+    <footer>
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <p>Copyright &copy; H3 2017</p>
+            </div>
+    </footer>
+    <!-- /.footer -->
 
     <!-- jQuery -->
     <script src="./js/jquery.js"></script>

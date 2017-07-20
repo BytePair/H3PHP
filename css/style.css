@@ -10,6 +10,11 @@ body {
     font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+.row {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
 .text-vertical-center {
     display: table-cell;
     text-align: center;
@@ -56,18 +61,16 @@ body {
 .header {
     display: table;
     position: relative;
-    width: 100%;
-    min-height: 100vh;
-    background: url(../assets/clouds1.jpeg) no-repeat center center scroll;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-    padding: 0 20px 0 20px;
+    min-height: 100%;
+    margin-bottom: -50px;
 }
 
 .header h1 {
     color: #286090;
+}
+
+.page-header {
+    padding-top: 70px;
 }
 
 /* Login Form */
@@ -75,7 +78,8 @@ body {
 #login-form {
     max-width: 350px;
     padding: 20px 20px 10px 20px;
-    background: rgba(255, 255, 255, 0.7);
+    /* background: rgba(255, 255, 255, 0.7); */
+    border: #286090 solid 2px;
     border-radius: 20px;
     margin-bottom: 15vh;
 }
@@ -97,7 +101,8 @@ body {
 #sign-up-form {
     max-width: 350px;
     padding: 20px 20px 10px 20px;
-    background: rgba(255, 255, 255, 0.7);
+    /* background: rgba(255, 255, 255, 0.7); */
+    border: #286090 solid 2px;
     border-radius: 20px;
     margin-bottom: 15vh;
 }
@@ -112,5 +117,69 @@ body {
 }
 
 #back-home-button {
+    margin: 0;
+}
+
+/* Navbar */
+.navbar-inverse {
+    background-color: #286090;
+    border-color: #286090;
+    height: 80px;
+}
+
+.navbar-inverse .navbar-brand,
+.navbar h1 {
+    color: white;
+}
+
+.navbar-brand,
+.navbar-nav li a,
+.navbar-nav button {
+    line-height: 80px;
+    height: 80px;
+    padding-top: 0;
+    text-decoration: none;
+}
+
+.navbar-nav button {
+    font-size: 20px;
+}
+
+.navbar-inverse .btn-link {
+    color: white;
+    text-decoration: none;
+}
+
+.navbar-inverse .btn-link:hover {
+    color: white;
+    font-style: italic;
+    transition: all 3s ease-in;
+}
+
+/* Thermostats */
+
+.thermostat {
+    width: 100%;
+    background: #cccccc;
+    border-radius: 10px;
+}
+
+.thermostat h1 {
+    margin-bottom: 0;
+    font-size: 4vw;
+}
+
+.thermostat h2 {
+    text-decoration: none;
+    margin-top: 0;
+    font-size: 1.5vw;
+}
+
+/* Footer */
+footer {
+    height: 50px;
+}
+
+footer p {
     margin: 0;
 }

@@ -22,4 +22,4 @@
 
 <body>
 
-<header id="top" class="header">
+<header id="top" class="header col-md-12">

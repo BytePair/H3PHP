@@ -8,4 +8,5 @@
         session_destroy();
         // return to home page
         header("Location: ../");
+        exit();
     }
