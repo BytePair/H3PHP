@@ -41,7 +41,7 @@
                         $_SESSION['u_name'] = $row['user_name'];
                         $_SESSION['u_email'] = $row['user_email'];
 
-                        header("Location: ../index.php?login=success");
+                        header("Location: ../");
                         exit();
                     }
 

@@ -17,8 +17,8 @@
             exit();
         } else {
             // check for valid characters
-            if (!preg_match("/^[a-zA-Z]*$/", $username)) {
-                header("Location: ../signup.php?signup=invalid,user:$username,email:$email,pwd:$pwd");
+            if (!preg_match("/^[a-zA-Z0-9]*$/", $username)) {
+                header("Location: ../signup.php?signup=invalidusername");
                 exit();
             } else {
                 // check if email is valid
@@ -45,7 +45,7 @@
                         mysqli_query($conn, $insert_sql);
 
                         // return to successful sign up screen
-                        header("Location: ../signup.php?signup=success");
+                        header("Location: ../");
                         exit();
                     }
                 }

@@ -1,143 +1,116 @@
-/*
-    Custom CSS
- */
+/* Global Styles */
 
-
-.main-wrapper {
-    margin: 0 auto;
-    width: 1000px;
-}
-
-a {
-    text-decoration: none;
+html,
+body {
+    width: 100%;
+    height: 100%;
 }
 
 body {
-    background-color: #ccc;
+    font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-header nav {
-    width: 100%;
-    height: 60px;
-    background-color: #fff;
-}
-
-header nav ul {
-    float: left;
-}
-
-header nav ul li {
-    float: left;
-    list-style: none;
-}
-
-header nav ul li a {
-    font-family: Arial;
-    font-size: 16px;
-    color: #111;
-    line-height: 63px;
-}
-
-header .nav-login {
-    float: right;
-}
-
-header .nav-login form {
-    float: left;
-    padding-top: 15px;
-}
-
-header .nav-login form input {
-    float: left;
-    width: 140px;
-    height: 30px;
-    padding: 0 10px;
-    margin-right: 10px;
-    border: none;
-    background-color: #ccc;
-    font-family: Arial;
-    font-size: 14px;
-    color: #111;
-    line-height: 30px;
-}
-
-header .nav-login form button {
-    float: left;
-    width: 60px;
-    height: 30px;
-    margin-right: 10px;
-    border: none;
-    background-color: #f3f3f3;
-    font-family: Arial;
-    font-size: 14px;
-    color: #111;
-    cursor: pointer;
-}
-
-header .nav-login form button:hover {
-    background-color: #ccc;
-}
-
-header .nav-login a {
-    float: left;
-    display: block;
-    width: 60px;
-    height: 60px;
-    border: none;
-    background-color: #fff;
-    font-family: Arial;
-    font-size: 16px;
-    color: #111;
-    line-height: 63px;
-    cursor: pointer;
-}
-
-.main-container {
-    padding-top: 40px;
-}
-
-.main-container h2 {
-    font-family: Arial;
-    font-size: 40px;
-    color: #111;
-    line-height: 50px;
+.text-vertical-center {
+    display: table-cell;
     text-align: center;
+    vertical-align: middle;
+}
+
+.text-vertical-center h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 4.5em;
+    font-weight: 700;
+}
+
+/* Login Style */
+
+.App {
+    text-align: center;
+}
+
+.App-logo {
+    animation: App-logo-spin infinite 20s linear;
+    height: 80px;
+}
+
+.App-header {
+    background-color: #222;
+    height: 150px;
+    padding: 20px;
+    color: white;
+}
+
+.App-intro {
+    font-size: large;
+}
+
+@keyframes App-logo-spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+
+/* Header */
+
+.header {
+    display: table;
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: url(../assets/clouds1.jpeg) no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    padding: 0 20px 0 20px;
+}
+
+.header h1 {
+    color: #286090;
+}
+
+/* Login Form */
+
+#login-form {
+    max-width: 350px;
+    padding: 20px 20px 10px 20px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 20px;
+    margin-bottom: 15vh;
+}
+
+#login-form input[type=text], input[type=password] {
+    margin-top: 10px;
+}
+
+#loginButton {
+    margin-bottom: 5px;
+}
+
+#login_register_btn {
+    margin: 0 10px 0 10px;
 }
 
 /* Sign Up Form */
 
-.sign-up-form {
-    width: 400px;
-    margin: 0 auto;
-    padding-top: 30px;
+#sign-up-form {
+    max-width: 350px;
+    padding: 20px 20px 10px 20px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 20px;
+    margin-bottom: 15vh;
 }
 
-.sign-up-form input {
-    width: 90%;
-    height: 40px;
-    padding: 0 5%;
-    margin-bottom: 4px;
-    border: none;
-    background-color: #fff;
-    font-family: Arial;
-    font-size: 16px;
-    color: #111;
-    line-height: 40px;
+#sign-up-form input[type=text], input[type=password] {
+    margin-top: 10px;
 }
 
-.sign-up-form button {
-    display: block;
-    margin: 0 auto;
-    color: white;
-    width: 30%;
-    height: 40px;
-    border: none;
-    background-color: #222;
-    font-family: Arial;
-    font-size: 16px;
-    cursor: pointer;
+#signUpButton {
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
 
-.sign-up-form button:hover {
-    background-color: #111;
+#back-home-button {
+    margin: 0;
 }
