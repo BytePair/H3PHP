@@ -26,7 +26,7 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <form action="includes/logout.inc.php" method="POST">
+                    <form action="" method="GET">
                         <button class="btn btn-link">Add New</button>
                     </form>
                 </li>
@@ -48,9 +48,10 @@
 
     <!-- Page Header -->
     <div class="row">
-        <div class="col-lg-12 text-center">
+        <div class="col-lg-12">
             <h1 class="page-header"><?php echo $_SESSION['u_name']; ?>'s Thermostats
                 <small>
+                    <a href="./"><i class="fa fa-refresh" aria-hidden="true"></i></a>
                 </small>
             </h1>
         </div>
@@ -60,19 +61,19 @@
     <!-- Projects Row -->
     <div class="row">
 
-        <div class="col-md-4 portfolio-item">
+        <div class="col-sm-4 thermostat-div">
             <a href="#">
                 <div class="thermostat">
 
                     <div class="row">
 
                         <div class="col-xs-4 col-xs-offset-2 text-center">
-                            <h1 class="set-temp">72
+                            <h1 class="set-temp">76
                             </h1>
                             <h2>Set</h2>
                         </div>
                         <div class="col-xs-4 text-center">
-                            <h1 class="real-temp">72
+                            <h1 class="real-temp">75
                             </h1>
                             <h2>Real</h2>
                         </div>
@@ -80,12 +81,12 @@
                 </div>
             </a>
             <h3>
-                <a href="#">Home</a>
+                Home
             </h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
         </div>
 
-        <div class="col-md-4 portfolio-item">
+        <div class="col-sm-4 thermostat-div">
             <a href="#">
                 <div class="thermostat">
 
@@ -97,7 +98,7 @@
                             <h2>Set</h2>
                         </div>
                         <div class="col-xs-4 text-center">
-                            <h1 class="real-temp">72
+                            <h1 class="real-temp">73
                             </h1>
                             <h2>Real</h2>
                         </div>
@@ -105,7 +106,7 @@
                 </div>
             </a>
             <h3>
-                <a href="#">Home</a>
+                Office
             </h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
         </div>

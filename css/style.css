@@ -28,6 +28,7 @@ body {
     font-weight: 700;
 }
 
+
 /* Login Style */
 
 .App {
@@ -73,6 +74,7 @@ body {
     padding-top: 70px;
 }
 
+
 /* Login Form */
 
 #login-form {
@@ -95,6 +97,7 @@ body {
 #login_register_btn {
     margin: 0 10px 0 10px;
 }
+
 
 /* Sign Up Form */
 
@@ -120,7 +123,9 @@ body {
     margin: 0;
 }
 
+
 /* Navbar */
+
 .navbar-inverse {
     background-color: #286090;
     border-color: #286090;
@@ -152,32 +157,49 @@ body {
 
 .navbar-inverse .btn-link:hover {
     color: white;
-    font-style: italic;
-    transition: all 3s ease-in;
 }
+
 
 /* Thermostats */
 
+.thermostat-div {
+    color: #286090;
+}
+
 .thermostat {
     width: 100%;
-    background: #cccccc;
-    border-radius: 10px;
+    background: #fff; /* gray -> #cccccc */
+    border: 2px solid #286090;
+    border-radius: 5px;
+    box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+a .thermostat:hover {
+    box-shadow: 0 10px 16px 0 rgba(0,0,0,0.4),0 6px 20px 0 rgba(0,0,0,0.5);
 }
 
 .thermostat h1 {
     margin-bottom: 0;
-    font-size: 4vw;
+    font-size: 50px;
+    /* font-size: 4vw; */
 }
 
 .thermostat h2 {
     text-decoration: none;
     margin-top: 0;
-    font-size: 1.5vw;
+    font-size: 20px;
+    /* font-size: 1.5vw; */
 }
+
+.col-xs-4 {
+    padding: 0;
+}
+
 
 /* Footer */
 footer {
     height: 50px;
+    color: #286090;
 }
 
 footer p {
