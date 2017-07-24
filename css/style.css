@@ -2,201 +2,60 @@
 
 html,
 body {
-    width: 100%;
-    height: 100%;
-}
-
-body {
     font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .row {
-    margin-left: 0px;
-    margin-right: 0px;
-}
-
-.text-vertical-center {
-    display: table-cell;
-    text-align: center;
-    vertical-align: middle;
-}
-
-.text-vertical-center h1 {
     margin: 0;
-    padding: 0;
-    font-size: 4.5em;
-    font-weight: 700;
 }
 
 
-/* Login Style */
+/* Main Container */
 
-.App {
-    text-align: center;
-}
-
-.App-logo {
-    animation: App-logo-spin infinite 20s linear;
-    height: 80px;
-}
-
-.App-header {
-    background-color: #222;
-    height: 150px;
-    padding: 20px;
-    color: white;
-}
-
-.App-intro {
-    font-size: large;
-}
-
-@keyframes App-logo-spin {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-}
-
-
-/* Header */
-
-.header {
+.container-fluid{
+    min-height: 100vh;
     display: table;
-    position: relative;
-    min-height: 100%;
+    width: 100%;
+    padding: 0;
     margin-bottom: -50px;
 }
 
-.header h1 {
+.row-fluid {
+    margin: 0;
+    display: table-cell;
+    vertical-align: middle;
+    height: 100%;
+}
+
+
+/* Forms */
+
+form {
+    border: 1px solid #286090;
+    border-radius: 10px;
+    padding: 20px;
     color: #286090;
+    margin-bottom: 50px;
 }
 
-.page-header {
-    padding-top: 70px;
+form h1 {
+    margin-top: 0;
+    margin-bottom: 20px;
 }
 
-
-/* Login Form */
-
-#login-form {
-    max-width: 350px;
-    padding: 20px 20px 10px 20px;
-    /* background: rgba(255, 255, 255, 0.7); */
-    border: #286090 solid 2px;
-    border-radius: 20px;
-    margin-bottom: 15vh;
-}
-
-#login-form input[type=text], input[type=password] {
+.form-control {
     margin-top: 10px;
-}
-
-#loginButton {
-    margin-bottom: 5px;
-}
-
-#login_register_btn {
-    margin: 0 10px 0 10px;
-}
-
-
-/* Sign Up Form */
-
-#sign-up-form {
-    max-width: 350px;
-    padding: 20px 20px 10px 20px;
-    /* background: rgba(255, 255, 255, 0.7); */
-    border: #286090 solid 2px;
-    border-radius: 20px;
-    margin-bottom: 15vh;
-}
-
-#sign-up-form input[type=text], input[type=password] {
-    margin-top: 10px;
-}
-
-#signUpButton {
-    margin-top: 20px;
     margin-bottom: 10px;
 }
 
-#back-home-button {
-    margin: 0;
+.btn-block {
+    margin-top: 20px;
+    margin-bottom: 5px;
 }
-
-
-/* Navbar */
-
-.navbar-inverse {
-    background-color: #286090;
-    border-color: #286090;
-    height: 80px;
-}
-
-.navbar-inverse .navbar-brand,
-.navbar h1 {
-    color: white;
-}
-
-.navbar-brand,
-.navbar-nav li a,
-.navbar-nav button {
-    line-height: 80px;
-    height: 80px;
-    padding-top: 0;
-    text-decoration: none;
-}
-
-.navbar-nav button {
-    font-size: 20px;
-}
-
-.navbar-inverse .btn-link {
-    color: white;
-    text-decoration: none;
-}
-
-.navbar-inverse .btn-link:hover {
-    color: white;
-}
-
-
-/* Thermostats */
-
-.thermostat-div {
-    color: #286090;
-}
-
-.thermostat {
-    width: 100%;
-    background: #fff; /* gray -> #cccccc */
-    border: 2px solid #286090;
-    border-radius: 5px;
-    box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-}
-
-a .thermostat:hover {
-    box-shadow: 0 10px 16px 0 rgba(0,0,0,0.4),0 6px 20px 0 rgba(0,0,0,0.5);
-}
-
-.thermostat h1 {
-    margin-bottom: 0;
-    font-size: 50px;
-    /* font-size: 4vw; */
-}
-
-.thermostat h2 {
-    text-decoration: none;
-    margin-top: 0;
-    font-size: 20px;
-    /* font-size: 1.5vw; */
-}
-
-.col-xs-4 {
-    padding: 0;
-}
-
 
 /* Footer */
+
+
 footer {
     height: 50px;
     color: #286090;

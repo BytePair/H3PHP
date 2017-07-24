@@ -1,5 +1,8 @@
 <?php
-    session_start();
+
+    if (session_status() != PHP_SESSION_ACTIVE) {
+        session_start();
+    }
 
     function header_loaded(){};
 ?>
@@ -18,9 +21,6 @@
     <!-- Favicon -->
     <link rel="icon" href="./assets/favicon.ico" />
 
-    <!-- Clear Default CSS -->
-    <link rel="stylesheet" type="text/css" href="./css/reset.css" />
-
     <!-- Bootstrap -->
     <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css" />
 
@@ -36,5 +36,3 @@
 </head>
 
 <body>
-
-<header id="top" class="header col-md-12">
