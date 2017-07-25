@@ -3,6 +3,7 @@
 html,
 body {
     font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #286090;
 }
 
 .row {
@@ -28,14 +29,23 @@ body {
 }
 
 
+/* Reset Message */
+
+.reset-message {
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+}
+
+
 /* Forms */
 
 form {
     border: 1px solid #286090;
     border-radius: 10px;
     padding: 20px;
-    color: #286090;
-    margin-bottom: 50px;
+    margin-bottom: 70px;
 }
 
 form h1 {
@@ -43,7 +53,33 @@ form h1 {
     margin-bottom: 20px;
 }
 
-.form-control {
+#login-form {
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#sign-up-form {
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#reset-form {
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.input-group-addon {
+    background-color: #fff;
+    color: #286090;
+    padding: .5rem .5rem;
+    font-size: 1rem;
+    line-height: 1.25;
+}
+
+.input-group {
     margin-top: 10px;
     margin-bottom: 10px;
 }
@@ -53,8 +89,125 @@ form h1 {
     margin-bottom: 5px;
 }
 
-/* Footer */
+.link-row a {
+    width: 50%;
+}
 
+
+/* Navbar */
+
+#bg-primary {
+    background-color: #286090!important;
+    padding: 10px 20px 10px 30px;
+}
+
+@media (min-width: 1092px) {
+    #bg-primary {
+        padding: 10px 70px;
+    }
+}
+
+.nav-form {
+    border: none;
+    padding: 0 .5rem;
+    border-radius: 0;
+    margin-bottom: 0;
+}
+
+.nav-form .btn-link,
+.nav-item a {
+    text-decoration: none;
+    color: rgba(255,255,255,.5);
+    cursor: pointer;
+}
+
+.nav-form .btn-link:hover,
+.nav-item a:hover {
+    text-decoration: none;
+    color: rgba(255,255,255,1);
+}
+
+.navbar-brand {
+    padding-right: 50px;
+    line-height: 50px;
+}
+
+.btn-link {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.navbar-toggler-right {
+    height: 50px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+.navbar-inverse .navbar-toggler:focus {
+    outline: none;
+}
+
+.navbar-collapse.collapse.in {
+    display: block!important;
+}
+
+
+/* Thermostats Page */
+
+.page-header {
+    margin: 2vh auto;
+}
+
+.container-with-header {
+    padding-top: 80px;
+    max-width: 1000px;
+    padding-bottom: 50px;
+}
+
+@media (max-width: 767px) {
+    .thermostat-div {
+        padding: 10px 20px !important;
+    }
+}
+
+.thermostat-div {
+    padding: 10px;
+}
+
+.thermostat {
+    border: 1px solid #286090;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+.thermostat:hover {
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+.thermostat a {
+    text-decoration: none;
+    color: #286090;
+}
+
+
+/* links under forms */
+
+#back-home-button,
+#back-home-button:focus,
+#sign_up_link,
+#sign_up_link:focus,
+#reset_password_link,
+#reset_password_link:focus {
+    color: #0275d8;
+    text-decoration: none;
+    outline: none;
+    box-shadow: none;
+    cursor: pointer;
+}
+
+
+/* Footer */
 
 footer {
     height: 50px;
@@ -63,4 +216,5 @@ footer {
 
 footer p {
     margin: 0;
+    line-height: 50px;
 }

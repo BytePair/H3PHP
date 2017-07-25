@@ -8,16 +8,31 @@
 
     <div class="row-fluid">
 
-        <div class="col-md-4 col-md-offset-4">
+        <div class="col-md-6 offset-md-3">
 
             <form id="sign-up-form" class="center-block text-center" action="./includes/signup.inc.php" method="POST">
                 
                 <h1>Register</h1>
-                
-                <input class="form-control" type="text" name="username" placeholder="Username" required />
-                <input class="form-control" type="text" name="email" placeholder="Email" required />
-                <input class="form-control" type="password" name="pwd" placeholder="Password" required />
-                <input class="form-control" type="password" name="pwd2" placeholder="Verify Password" required />
+
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-user fa-fw" aria-hidden="true"></i></span>
+                    <input class="form-control" type="text" name="username" placeholder="Username" required />
+                </div>
+
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-envelope fa-fw" aria-hidden="true"></i></span>
+                    <input class="form-control" type="text" name="email" placeholder="Email" required />
+                </div>
+
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-key fa-fw" aria-hidden="true"></i></span>
+                    <input class="form-control" type="password" name="pwd" placeholder="Password" required />
+                </div>
+
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-key fa-fw" aria-hidden="true"></i></span>
+                    <input class="form-control" type="password" name="pwd2" placeholder="Verify Password" required />
+                </div>
                 
                 <button type="submit" name="submit" class="btn btn-primary btn-lg btn-block" id="signUpButton">Register</button>
 
@@ -40,7 +55,7 @@
                     }
                 ?>
 
-                <a id="back-home-button" type="button" class="btn btn-link" href="./">Go Back Home</a>
+                <a id="back-home-button" class="btn btn-link col-12 text-center" href="./">Cancel</a>
             </form>
 
         </div>
@@ -53,5 +68,5 @@
 <!-- ./container-fluid -->
 
 <?php
-include_once 'footer.php';
+    include_once 'footer.php';
 ?>

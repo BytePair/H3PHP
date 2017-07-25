@@ -1,12 +1,14 @@
 <?php
 
-session_start();
+    if (session_status() != PHP_SESSION_ACTIVE) {
+        session_start();
+    }
 
-// check if we are trying to access directly
-if (!function_exists('header_loaded')) {
-    header("Location: ./");
-    exit();
-}
+    // check if we are trying to access directly
+    if (!function_exists('header_loaded')) {
+        header("Location: ./");
+        exit();
+    }
 ?>
 
 
