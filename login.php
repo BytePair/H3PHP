@@ -38,17 +38,24 @@
                 <?php
 
                 $login_error = (isset($_GET['login'])) ? $_GET['login'] : null;
+                $new_user = (isset($_GET['newuser'])) ? $_GET['newuser'] : null;
 
                 /* Catch and display registration errors */
                 if ($login_error) {
                     switch ($login_error) {
                         case "error":
-                            echo('<p style="font-weight: bold; color: red; margin: 0;">Error: Invalid Username/Password</p>');
+                            echo('<p class="text-center" style="font-weight: bold; color: red; margin: 0;">Error: Invalid Username/Password</p>');
                             break;
                         default:
                             break;
                     }
                 }
+
+                /* Catch new user message */
+                if ($new_user) {
+                    echo('<p class="text-center" style="font-weight: bold; color: green; margin: 0;">User created successfully!</p>');
+                }
+
                 ?>
 
                 <div class="row">

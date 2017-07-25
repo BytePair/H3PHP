@@ -45,7 +45,7 @@
                         mysqli_query($conn, $insert_sql);
 
                         // return to successful sign up screen
-                        header("Location: ../");
+                        header("Location: ../?newuser=true");
                         exit();
                     }
                 }

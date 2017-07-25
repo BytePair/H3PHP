@@ -154,6 +154,10 @@ form h1 {
 
 /* Thermostats Page */
 
+#applyButton {
+    cursor: pointer;
+}
+
 .page-header {
     margin: 2vh auto;
 }
@@ -190,6 +194,11 @@ form h1 {
     color: #286090;
 }
 
+.location-heading,
+.temp-heading {
+    margin-bottom: 20px;
+}
+
 
 /* links under forms */
 
@@ -204,6 +213,61 @@ form h1 {
     outline: none;
     box-shadow: none;
     cursor: pointer;
+}
+
+.nav-button,
+.nav-button:focus {
+    text-decoration: none;
+    outline: none!important;
+    box-shadow: none!important;
+    cursor: pointer;
+}
+
+#deleteButton:focus {
+    color: #fff;
+}
+
+
+/* Edit Thermostats */
+
+.btn-group.col-12 {
+    padding: 0 50px;
+}
+
+.on-label,
+.on-label:hover {
+    background-color: #7EABFF;
+    border-color: #7EABFF;
+    cursor: pointer;
+    box-shadow: none;
+    z-index: 0!important;
+    margin-left: 0px;
+}
+
+.on-label.active,
+.on-label.active:focus {
+    font-weight: bold;
+    background-color: #025aa5;
+    border-color: #01549b;
+    box-shadow: none;
+}
+
+.off-label,
+.off-label:hover {
+    background-color: #ff837b;
+    border-color: #ff837b;
+    cursor: pointer;
+    box-shadow: none;
+    z-index: 0!important;
+    margin-left: 0px;
+}
+
+.off-label.active,
+.off-label.active:focus {
+    font-weight: bold;
+    background-color: #c9302c;
+    border-color: #c12e2a;
+    box-shadow: none;
 }
 
 

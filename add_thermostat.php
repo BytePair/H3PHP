@@ -55,7 +55,7 @@
 
                 <div class="input-group">
                     <span class="input-group-addon"><i class="fa fa-user fa-fw" aria-hidden="true"></i></span>
-                    <input class="form-control" type="text" name="username" placeholder="<?php echo $_SESSION['u_name']; ?>" required disabled />
+                    <input class="form-control" type="text" name="username" placeholder="<?php echo $_SESSION['u_name']; ?>" value="<?php echo $_SESSION['u_name']; ?>" required disabled />
                 </div>
 
                 <div class="input-group">
@@ -74,6 +74,9 @@
                 /* Catch and display registration errors */
                 if ($error) {
                     switch ($error) {
+                        case "empty":
+                            echo('<p style="font-weight: bold; color: red; margin: 0;">Error: Missing Field</p>');
+                            break;
                         case "iptaken":
                             echo('<p style="font-weight: bold; color: red; margin: 0;">Error: IP address already used</p>');
                             break;
@@ -98,7 +101,3 @@
 <?php
     include_once 'footer.php';
 ?>
-
-</div>
-<!-- ./container-fluid -->
-

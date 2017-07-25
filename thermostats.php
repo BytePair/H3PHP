@@ -21,14 +21,14 @@
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
                 <form action="./add_thermostat.php" class="nav-form text-center">
-                    <button class="btn btn-link">
+                    <button class="btn btn-link nav-button">
                         Add New
                     </button>
                 </form>
             </li>
             <li class="nav-item">
                 <form action="includes/logout.inc.php" method="POST" class="nav-form text-center">
-                    <button class="btn btn-link" type="submit" name="submit">
+                    <button class="btn btn-link nav-button" type="submit" name="submit">
                         Logout
                     </button>
                 </form>
@@ -44,64 +44,84 @@
 
     <?php
 
+
+    // initialize a curl session
+    $curl = curl_init();
+
+    // the URL to fetch
+    curl_setopt($curl, CURLOPT_URL, "http://www.colehirapara.com/api/thermostat");
+
+    // TRUE to return the transfer as a string of the return value of curl_exec() instead of outputting it out directly
+    curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+
+    // perform a curl session
+    $result = curl_exec($curl);
+
+    // close a curl session
+    curl_close($curl);
+
+    // decode the json result
+    $json = json_decode($result);
+
+
     echo "<div class='row'>";
 
-        for ($i = 0; $i < 5; $i++) {
+        // keep track of loop number
+        $loop_number = 0;
 
-            // end the new row
-            if ($i % 3 == 0) {
-                echo "";
-            }
+        // loop through all of the json objects
+        foreach ($json as $item) {
 
-            // start a new row
-            if ($i % 3 == 0) {
-                echo "";
-            }
+            // check if ac is on
+            $active = $item->acActivated ? 'ON' : 'OFF';
 
             // print the thermostat
             echo   "<div class='col-md-4 thermostat-div'>
                         <div class='thermostat'>
-                        <a href='./' class=''>
+                        <a href='./edit_thermostat.php?id=".$item->Id."&settemp=".$item->SetTemp."&state=".$active."' class=''>
                             
-                            <h2 class='text-center'>Home</h2>
+                            <h2 class='text-center location-heading'>".$item->Id."</h2>
                             <div class='row'>
                                 <div class='col-4 offset-2 text-center'>
-                                    <h1 class='set-temp'>76</h1>
-                                    <h3>Set</h3>
+                                    <h1 class='set-temp'>".$item->SetTemp."</h1>
+                                    <h3 class='temp-heading'>Set</h3>
                                 </div>
                                 <div class='col-4 text-center'>
-                                    <h1 class='real-temp'>75</h1>
-                                    <h3>Real</h3>
+                                    <h1 class='real-temp'>".$item->CurrentTemp."</h1>
+                                    <h3 class='temp-heading'>Real</h3>
                                 </div>
                             </div>
-                            <br>
-                            <table>
+                            <table style='width: 100%;'>
                                 <tr>
-                                    <td>Status:</td>
-                                    <td> </td>
-                                    <td><b>ON</b></td>
+                                    <td style='text-align: right; width: 45%;'>Status: </td>
+                                    <td style='text-align: left; width: 45%;'><b>".$active."</b></td>
                                 </tr>
                                 <tr>
-                                    <td>Model:</td>
-                                    <td> </td>
-                                    <td>Super Cooler 9000</td>
+                                    <td style='text-align: right;'>Make: </td>
+                                    <td>Emerson</td>
                                 </tr>
                                 <tr>
-                                    <td>IP Address:</td>
-                                    <td> </td>
-                                    <td>192.14.723.1</td>
+                                    <td style='text-align: right;'>Model: </td>
+                                    <td>ST75</td>
                                 </tr>
                             </table>
                         </a>
                         </div>
                     </div>";
+
+            // increment the location number
+            $loop_number = $loop_number + 1;
+
+        // end of loop
         };
 
     echo "</div>";
 
-    ?>
 
 
+
+
+?>
 
 </div>
 <!-- ./container-fluid -->
