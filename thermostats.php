@@ -80,7 +80,7 @@
                         <div class='thermostat'>
                         <a href='./edit_thermostat.php?id=".$item->Id."&settemp=".$item->SetTemp."&state=".$active."' class=''>
                             
-                            <h2 class='text-center location-heading'>".$item->Id."</h2>
+                            <h2 class='text-center location-heading'>Location #".$item->Id."</h2>
                             <div class='row'>
                                 <div class='col-4 offset-2 text-center'>
                                     <h1 class='set-temp'>".$item->SetTemp."</h1>

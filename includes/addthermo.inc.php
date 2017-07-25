@@ -41,7 +41,7 @@ if (isset($_POST['submit'])) {
 
         // encode the object as a json object
         $new_count = rand(10, 50000);
-        $data = array("Id" => $new_count, "CurrentTemp" => 75, "SetTemp" => 76, "acActivated" => true);
+        $data = array("Id", "CurrentTemp" => 75, "SetTemp" => 76, "acActivated" => true);
         $data_string = json_encode($data);
 
         // initialize a curl session
