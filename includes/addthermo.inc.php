@@ -31,14 +31,12 @@ if (isset($_POST['submit'])) {
     $locationName = mysqli_real_escape_string($conn, $_POST['locationName']);
     $ipAddress = mysqli_real_escape_string($conn, $_POST['ip']);
 
-    echo '<p>location: '.$locationName.'</p>';
-    echo '<p>ip: '.$ipAddress.'</p>';
-
 
     // check for empty fields
     if (empty($username) || empty($locationName) || empty($ipAddress)) {
         header("Location: ../add_thermostat.php?add=empty");
         exit();
+
     } else {
         // all the checks passed
 
@@ -62,19 +60,20 @@ if (isset($_POST['submit'])) {
                 'Content-Length: '.strlen($data_string))
         );
 
+
         // perform a curl session
         $result = curl_exec($curl);
 
-        // print results
-        echo 'result: '.$result;
 
         // close a curl session
         curl_close($curl);
+
 
         // return to successful sign up screen
         header("Location: ../thermostats.php");
         exit();
     }
+
 
     } else {
         // else send them back to the add_therostats page
