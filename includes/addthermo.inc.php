@@ -31,6 +31,9 @@ if (isset($_POST['submit'])) {
     $locationName = mysqli_real_escape_string($conn, $_POST['locationName']);
     $ipAddress = mysqli_real_escape_string($conn, $_POST['ip']);
 
+    echo '<p>location: '.$locationName.'</p>';
+    echo '<p>ip: '.$ipAddress.'</p>';
+
 
     // check for empty fields
     if (empty($username) || empty($locationName) || empty($ipAddress)) {
@@ -63,7 +66,7 @@ if (isset($_POST['submit'])) {
         $result = curl_exec($curl);
 
         // print results
-        // echo $result;
+        echo 'result: '.$result;
 
         // close a curl session
         curl_close($curl);

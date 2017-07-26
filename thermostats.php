@@ -73,12 +73,18 @@
         foreach ($json as $item) {
 
             // check if ac is on
-            $active = $item->acActivated ? 'ON' : 'OFF';
+            $active = $item->acActivated ? 'true' : 'false';
+
+            // and get label for that section
+            $active_string = ($active == 'true') ? 'ON' : 'OFF';
+
+            // color effects
+            $color_coding = ($active == 'true') ? 'green-shadow' : 'red-shadow';
 
             // print the thermostat
             echo   "<div class='col-md-4 thermostat-div'>
-                        <div class='thermostat'>
-                        <a href='./edit_thermostat.php?id=".$item->Id."&settemp=".$item->SetTemp."&state=".$active."' class=''>
+                        <div class='thermostat ".$color_coding."'>
+                        <a href='./edit_thermostat.php?id=".$item->Id."&settemp=".$item->SetTemp."&state=".$active."'>
                             
                             <h2 class='text-center location-heading'>Location #".$item->Id."</h2>
                             <div class='row'>
@@ -94,7 +100,7 @@
                             <table style='width: 100%;'>
                                 <tr>
                                     <td style='text-align: right; width: 45%;'>Status: </td>
-                                    <td style='text-align: left; width: 45%;'><b>".$active."</b></td>
+                                    <td style='text-align: left; width: 45%;'><b>".$active_string."</b></td>
                                 </tr>
                                 <tr>
                                     <td style='text-align: right;'>Make: </td>

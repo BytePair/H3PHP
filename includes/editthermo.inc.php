@@ -15,53 +15,66 @@ if (isset($_POST['submit'])) {
 
     // get fields
     $id = $_POST['id'];
+    $oldTemp = $_POST['original_temp'];
     $setTemp = $_POST['setTemp'];
-    $state = $_POST['state'];
+    $old_state = $_POST['original_state'];
+    $new_state = $_POST['state'];
 
 
-    // convert to boolean value
-    // $acOn = ($state=='ON') ? "true" : "false";
-
-    echo "<p>id: ".$id."</p>";
-    echo "<p>settemp: ".$setTemp."</p>";
-    echo "<p>state: ".$state."</p>";
-    echo "<p>acon: ".$acOn."</p>";
+    // if old and new values are different, toggle the ac state
+    $acToggle = ($old_state == $new_state) ? 'false' : 'true';
 
 
-    // check for empty fields
-    if (empty($id) || empty($setTemp) || empty($state)) {
-        // header("Location: ../add_thermostat.php?add=empty");
-        // exit();
+    // if new temp is missing, just keep the old one
+    if (empty($setTemp)) {
+        // if old one is missing too, we have a prob
+        if (empty($oldTemp)) {
+            header("Location: ../");
+            exit();
+        } else {
+            $setTemp = $oldTemp;
+        }
+    }
+
+
+    // check for other empty fields
+    if (empty($id) || empty($old_state) || empty($new_state)) {
+        header("Location: ../");
+        exit();
 
     } else {
+
 
         // initialize a curl session
         $curl = curl_init();
 
+
         // the URL to fetch
         $url = "http://www.colehirapara.com/api/thermostat"."/".$id;
-        echo '<p>'.$url.'</p>';
         curl_setopt($curl, CURLOPT_URL, $url);
 
-        // encode the object as a json object
-        $data = array("Id" => $id, "CurrentTemp" => 75, "SetTemp" => $setTemp, "acActivated" => $state);
 
-        echo "<p>".json_encode($data)."</p>";
+        // encode the object as a json object
+        $data = array("Id" => $id, "CurrentTemp" => 75, "SetTemp" => $setTemp, "toggleAc" => $acToggle);
+
 
         // set to PUT request
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($curl, CURLOPT_CUSTOMREQUEST, "PUT");
         curl_setopt($curl, CURLOPT_POSTFIELDS, http_build_query($data));
 
+
         // perform a curl session
         $result = curl_exec($curl);
+
 
         // close a curl session
         curl_close($curl);
 
+
         // check for errors
         if (!empty($result)) {
-            echo $result;
+            // echo $result;
             header("Location: ../edit_thermostat.php?error=put");
             exit();
         } else {
@@ -73,7 +86,7 @@ if (isset($_POST['submit'])) {
 
 
 } else {
-    // else send them back to the add_therostats page
+    // if they didn't use post button, send back to thermostat page
     header("Location: ../edit_thermostat.php?error=usesubmit");
     exit();
 }

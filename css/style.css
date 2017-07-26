@@ -182,11 +182,26 @@ form h1 {
     border: 1px solid #286090;
     border-radius: 10px;
     padding: 15px;
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
 }
 
-.thermostat:hover {
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+.thermostat.green-shadow {
+    box-shadow: 3px 3px 5px rgba(0, 160, 0, 0.5),
+                -3px -3px 5px rgba(0, 160, 0, 0.5);
+}
+
+.thermostat.red-shadow {
+    box-shadow: 3px 3px 5px rgba(160, 0, 0, 0.5),
+                -3px -3px 5px rgba(160, 0, 0, 0.5);
+}
+
+.thermostat.green-shadow:hover {
+    box-shadow: 3px 3px 5px rgba(0, 160, 0, 0.8),
+                -3px -3px 5px rgba(0, 160, 0, 0.8);
+}
+
+.thermostat.red-shadow:hover {
+    box-shadow: 3px 3px 5px rgba(160, 0, 0, 0.8),
+                -3px -3px 5px rgba(160, 0, 0, 0.8);
 }
 
 .thermostat a {
@@ -197,6 +212,10 @@ form h1 {
 .location-heading,
 .temp-heading {
     margin-bottom: 20px;
+}
+
+.green-shadow {
+
 }
 
 
@@ -223,8 +242,11 @@ form h1 {
     cursor: pointer;
 }
 
+#deleteButton,
 #deleteButton:focus {
     color: #fff;
+    border-radius: .3rem;
+    -webkit-appearance: none;
 }
 
 

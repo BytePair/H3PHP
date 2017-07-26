@@ -24,7 +24,7 @@
     }
 
     // check for valid state
-    if($state != 'ON' && $state != 'OFF') {
+    if($state != 'true' && $state != 'false') {
         header("Location: ../");
         exit();
     }
@@ -68,9 +68,19 @@
 
                 <h1>Edit Thermostat</h1>
 
+                <!-- Hidden field with value of the thermostat id -->
                 <div class="input-group" style="display: none;">
-                    <span class="input-group-addon"><i class="fa fa-user fa-fw" aria-hidden="true"></i></span>
                     <input class="form-control" type="number" name="id" value="<?php echo $id; ?>" required />
+                </div>
+
+                <!-- Hidden field with the original state of the ac -->
+                <div class="input-group" style="display: none;">
+                    <input class="form-control" type="string" name="original_state" value="<?php echo $state; ?>" required />
+                </div>
+
+                <!-- Hidden field with value of original temp -->
+                <div class="input-group" style="display: none;">
+                    <input class="form-control" type="number" name="original_temp" value="<?php echo $temp; ?>" required />
                 </div>
 
                 <div class="input-group">
@@ -80,16 +90,16 @@
 
                 <div class="input-group">
                     <span class="input-group-addon"><i class="fa fa-thermometer-three-quarters fa-fw" aria-hidden="true"></i></span>
-                    <input class="form-control" type="number" name="setTemp" placeholder="Set Temperature: <?php echo $temp; ?>" required />
+                    <input class="form-control" type="number" name="setTemp" placeholder="Set Temperature: <?php echo $temp; ?>" />
                 </div>
 
                 <div class="input-group">
                     <div class="btn-group col-12" data-toggle="buttons" style="margin-top: 20px;">
-                        <label class="btn btn-primary col-6 on-label <?php echo ($state=='ON') ? 'active' : ''; ?>">
-                            <input type="radio" name="state" id="on_input" autocomplete="off" value=true <?php echo ($state=='ON') ? 'checked' : ''; ?>>ON
+                        <label class="btn btn-primary col-6 on-label <?php echo ($state=='true') ? 'active' : ''; ?>">
+                            <input type="radio" name="state" id="on_input" autocomplete="off" value="true" <?php echo ($state=='true') ? 'checked' : ''; ?>>ON
                         </label>
-                        <label class="btn btn-primary col-6 off-label <?php echo ($state=='OFF') ? 'active' : ''; ?>">
-                            <input type="radio" name="state" id="off_input" autocomplete="off" value=false <?php echo ($state=='OFF') ? 'active' : ''; ?>>OFF
+                        <label class="btn btn-primary col-6 off-label <?php echo ($state=='false') ? 'active' : ''; ?>">
+                            <input type="radio" name="state" id="off_input" autocomplete="off" value="false" <?php echo ($state=='false') ? 'checked' : ''; ?>>OFF
                         </label>
                     </div>
                 </div>

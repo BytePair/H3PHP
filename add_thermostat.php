@@ -26,14 +26,14 @@
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
                 <form action="./" class="nav-form text-center">
-                    <button class="btn btn-link">
+                    <button class="btn btn-link nav-button">
                         Home
                     </button>
                 </form>
             </li>
             <li class="nav-item">
                 <form action="includes/logout.inc.php" method="POST" class="nav-form text-center">
-                    <button class="btn btn-link" type="submit" name="submit">
+                    <button class="btn btn-link nav-button" type="submit" name="submit">
                         Logout
                     </button>
                 </form>
