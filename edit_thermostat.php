@@ -93,17 +93,9 @@
                     <input class="form-control" type="number" name="setTemp" placeholder="Set Temperature: <?php echo $temp; ?>" />
                 </div>
 
-                <div class="input-group">
-                    <div class="btn-group col-12" data-toggle="buttons" style="margin-top: 20px;">
-                        <label class="btn btn-primary col-6 on-label <?php echo ($state=='true') ? 'active' : ''; ?>">
-                            <input type="radio" name="state" id="on_input" autocomplete="off" value="true" <?php echo ($state=='true') ? 'checked' : ''; ?>>ON
-                        </label>
-                        <label class="btn btn-primary col-6 off-label <?php echo ($state=='false') ? 'active' : ''; ?>">
-                            <input type="radio" name="state" id="off_input" autocomplete="off" value="false" <?php echo ($state=='false') ? 'checked' : ''; ?>>OFF
-                        </label>
-                    </div>
-                </div>
-
+                <label>
+                    <input type="checkbox" checked data-toggle="toggle" name="AC_Checkbox" id="AC_Checkbox" data-onstyle="primary" data-offstyle="default" />
+                </label>
 
                 <button type="submit" name="submit" class="btn btn-primary btn-lg btn-block" id="applyButton">Apply</button>
 
@@ -123,9 +115,9 @@
                 }
                 ?>
 
-                <a type="button" class="btn btn-danger btn-lg btn-block" id="deleteButton" href="./includes/deletethermo.inc.php?id=<?php echo $id; ?>">Delete</a>
+                <a type="button" class="btn btn-warning btn-lg btn-block" id="cancelButton" href="./">Cancel</a>
 
-                <a id="back-home-button" class="btn btn-link col-12 text-center" href="./">Go Back</a>
+                <a type="button" class="btn btn-danger btn-lg btn-block" id="deleteButton" href="./includes/deletethermo.inc.php?id=<?php echo $id; ?>">Delete</a>
 
             </form>
 
@@ -137,6 +129,7 @@
 
 </div>
 <!-- ./container-fluid -->
+
 
 <?php
 include_once 'footer.php';

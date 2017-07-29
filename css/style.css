@@ -243,7 +243,9 @@ form h1 {
 }
 
 #deleteButton,
-#deleteButton:focus {
+#deleteButton:focus,
+#cancelButton,
+#cancelButton:focus {
     color: #fff;
     border-radius: .3rem;
     -webkit-appearance: none;
@@ -290,6 +292,22 @@ form h1 {
     background-color: #c9302c;
     border-color: #c12e2a;
     box-shadow: none;
+}
+
+.toggle-handle {
+    background-color: white;
+    border-width: 0 1px;
+    border-color: #adadad;
+}
+
+.toggle-on {
+}
+
+.toggle-off {
+    color: #333;
+    background-color: #e6e6e6;
+    border-left: 1px;
+    border-color: #adadad;
 }
 
 

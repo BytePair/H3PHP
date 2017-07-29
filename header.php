@@ -30,6 +30,9 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
 
+    <!-- Bootstrap Buttons Plugin -->
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap-toggle.min.css" />
+
     <!-- Custom CSS -->
     <link rel="stylesheet" type="text/css" href="./css/style.css" />
 

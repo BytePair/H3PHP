@@ -28,7 +28,10 @@
 <!-- Bootstrap Core JavaScript -->
 <script src="./js/bootstrap.min.js"></script>
 
-<!-- Custom Theme JavaScript -->
+<!-- Bootstrap Button -->
+<script src="./js/bootstrap-toggle.min.js"></script>
+
+<!-- Custom JavaScript -->
 <script src="./js/script.js"></script>
 
 

@@ -27,7 +27,7 @@
             <li class="nav-item">
                 <form action="./" class="nav-form text-center">
                     <button class="btn btn-link nav-button">
-                        Home
+                        Thermostats
                     </button>
                 </form>
             </li>
@@ -86,7 +86,7 @@
                 }
                 ?>
 
-                <a id="back-home-button" class="btn btn-link col-6 text-center" href="./">Go Back</a>
+                <a id="back-home-button" class="btn btn-link col-6 text-center" href="./">Cancel</a>
             </form>
 
         </div>
