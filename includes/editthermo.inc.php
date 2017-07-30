@@ -23,15 +23,10 @@ if (isset($_POST['submit'])) {
     // convert on or off to true or false
     $ac_checkbox = $_POST['AC_Checkbox'];
     $new_state = ($ac_checkbox) ? 'true' : 'false';
-    echo 'tab: '.$new_state;
 
 
     // if old and new values are different, toggle the ac state
     $acToggle = ($old_state == $new_state) ? 'false' : 'true';
-
-
-    // TODO: Remove this
-    exit();
 
 
     // if new temp is missing, just keep the old one

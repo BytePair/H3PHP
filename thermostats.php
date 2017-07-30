@@ -16,7 +16,7 @@
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#collapsingNavbarLg">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <a class="navbar-brand" href="./">H3</a>
+    <a class="navbar-brand" href="./"><img  id="navbar-brand-img" src="/assets/icon_clear_2.png" /></a>
     <div class="navbar-collapse collapse" id="collapsingNavbarLg">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
@@ -80,6 +80,7 @@
 
             // color effects
             $color_coding = ($active == 'true') ? 'green-shadow' : 'red-shadow';
+            $word_color = ($active == 'true') ? 'rgb(0, 160, 0)' : 'rgb(160, 0, 0)';
 
             // print the thermostat
             echo   "<div class='col-md-4 thermostat-div'>
@@ -100,7 +101,7 @@
                             <table style='width: 100%;'>
                                 <tr>
                                     <td style='text-align: right; width: 45%;'>Status: </td>
-                                    <td style='text-align: left; width: 45%;'><b>".$active_string."</b></td>
+                                    <td style='text-align: left; width: 45%;'><b style='color: ".$word_color."'>".$active_string."</b></td>
                                 </tr>
                                 <tr>
                                     <td style='text-align: right;'>Make: </td>

@@ -18,9 +18,9 @@
 
         <div class="col-md-6 offset-md-3">
 
-            <form id="login-form" class="" action="includes/login.inc.php" method="POST">
+            <form id="login-form" class="text-center" action="includes/login.inc.php" method="POST">
 
-                <h1 class="text-center">H3</h1>
+                <img src="./assets/icon.jpg" id="loginIcon"  />
 
                 <div class="input-group">
                     <span class="input-group-addon"><i class="fa fa-user fa-fw" aria-hidden="true"></i></span>

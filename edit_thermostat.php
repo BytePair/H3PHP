@@ -29,6 +29,9 @@
         exit();
     }
 
+    // check for errors
+    $error = $_GET['error'];
+
 ?>
 
 <!-- Navigation -->
@@ -36,7 +39,7 @@
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#collapsingNavbarLg">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <a class="navbar-brand" href="./">H3</a>
+    <a class="navbar-brand" href="./"><img  id="navbar-brand-img" src="/assets/icon_clear_2.png" /></a>
     <div class="navbar-collapse collapse" id="collapsingNavbarLg">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
@@ -93,8 +96,8 @@
                     <input class="form-control" type="number" name="setTemp" placeholder="Set Temperature: <?php echo $temp; ?>" />
                 </div>
 
-                <label>
-                    <input type="checkbox" checked data-toggle="toggle" name="AC_Checkbox" id="AC_Checkbox" data-onstyle="primary" data-offstyle="default" />
+                <label id="acCheckboxLabel">
+                    <input type="checkbox" <?php echo ($state == 'true') ? 'checked' : ''; ?> data-toggle="toggle" name="AC_Checkbox" id="AC_Checkbox" data-onstyle="primary" data-offstyle="default" data-width="150"/>
                 </label>
 
                 <button type="submit" name="submit" class="btn btn-primary btn-lg btn-block" id="applyButton">Apply</button>
@@ -115,9 +118,12 @@
                 }
                 ?>
 
-                <a type="button" class="btn btn-warning btn-lg btn-block" id="cancelButton" href="./">Cancel</a>
+                <!-- <a type="button" class="btn btn-warning btn-lg btn-block" id="cancelButton" href="./">Cancel</a> -->
 
                 <a type="button" class="btn btn-danger btn-lg btn-block" id="deleteButton" href="./includes/deletethermo.inc.php?id=<?php echo $id; ?>">Delete</a>
+
+                <a id="back-home-button" class="btn btn-link col-12 text-center" href="./">Cancel</a>
+
 
             </form>
 

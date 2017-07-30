@@ -3,7 +3,7 @@
 html,
 body {
     font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: #286090;
+    color: #880000;
 }
 
 .row {
@@ -42,7 +42,7 @@ body {
 /* Forms */
 
 form {
-    border: 1px solid #286090;
+    border: 1px solid #880000;
     border-radius: 10px;
     padding: 20px;
     margin-bottom: 70px;
@@ -73,7 +73,7 @@ form h1 {
 
 .input-group-addon {
     background-color: #fff;
-    color: #286090;
+    color: #880000;
     padding: .5rem .5rem;
     font-size: 1rem;
     line-height: 1.25;
@@ -93,11 +93,25 @@ form h1 {
     width: 50%;
 }
 
+#loginIcon {
+    width: 200px;
+}
+
+.btn-primary {
+    background-color: #880000;
+    border-color: #880000;
+}
+
+.btn-primary:active,
+.btn-primary:hover {
+    background-color: #750000;
+    border-color: #700000;
+}
 
 /* Navbar */
 
 #bg-primary {
-    background-color: #286090!important;
+    background-color: #880000!important;
     padding: 10px 20px 10px 30px;
 }
 
@@ -105,6 +119,10 @@ form h1 {
     #bg-primary {
         padding: 10px 70px;
     }
+}
+
+#navbar-brand-img {
+    height: 38px;
 }
 
 .nav-form {
@@ -117,13 +135,13 @@ form h1 {
 .nav-form .btn-link,
 .nav-item a {
     text-decoration: none;
-    color: rgba(255,255,255,.5);
+    color: rgba(255,255,255,1);
     cursor: pointer;
 }
 
 .nav-form .btn-link:hover,
 .nav-item a:hover {
-    text-decoration: none;
+    text-decoration: underline;
     color: rgba(255,255,255,1);
 }
 
@@ -179,34 +197,30 @@ form h1 {
 }
 
 .thermostat {
-    border: 1px solid #286090;
+    border: 1px solid #000000;
     border-radius: 10px;
     padding: 15px;
 }
 
 .thermostat.green-shadow {
-    box-shadow: 3px 3px 5px rgba(0, 160, 0, 0.5),
-                -3px -3px 5px rgba(0, 160, 0, 0.5);
+    box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.4);
 }
 
 .thermostat.red-shadow {
-    box-shadow: 3px 3px 5px rgba(160, 0, 0, 0.5),
-                -3px -3px 5px rgba(160, 0, 0, 0.5);
+    box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.4);
 }
 
 .thermostat.green-shadow:hover {
-    box-shadow: 3px 3px 5px rgba(0, 160, 0, 0.8),
-                -3px -3px 5px rgba(0, 160, 0, 0.8);
+    box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.6);
 }
 
 .thermostat.red-shadow:hover {
-    box-shadow: 3px 3px 5px rgba(160, 0, 0, 0.8),
-                -3px -3px 5px rgba(160, 0, 0, 0.8);
+    box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.6);
 }
 
 .thermostat a {
     text-decoration: none;
-    color: #286090;
+    color: #000000;
 }
 
 .location-heading,
@@ -232,6 +246,7 @@ form h1 {
     outline: none;
     box-shadow: none;
     cursor: pointer;
+    font-size: .8rem;
 }
 
 .nav-button,
@@ -294,19 +309,24 @@ form h1 {
     box-shadow: none;
 }
 
+#acCheckboxLabel {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.off {
+    border: 1px solid #adadad;
+}
+
 .toggle-handle {
     background-color: white;
     border-width: 0 1px;
     border-color: #adadad;
 }
 
-.toggle-on {
-}
-
 .toggle-off {
     color: #333;
     background-color: #e6e6e6;
-    border-left: 1px;
     border-color: #adadad;
 }
 
@@ -315,7 +335,7 @@ form h1 {
 
 footer {
     height: 50px;
-    color: #286090;
+    color: #880000;
 }
 
 footer p {
