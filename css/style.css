@@ -261,9 +261,13 @@ form h1 {
 #deleteButton:focus,
 #cancelButton,
 #cancelButton:focus {
-    color: #fff;
-    border-radius: .3rem;
+    font-size: .8rem;
     -webkit-appearance: none;
+    color: #0275d8;
+    text-decoration: none;
+    outline: none;
+    box-shadow: none;
+    cursor: pointer;
 }
 
 

@@ -59,7 +59,6 @@
                 ?>
 
                 <div class="row">
-                    <!-- TODO: Add Lost Password Button -->
                     <a id="reset_password_link" class="btn btn-link col-6 text-center" href="./send_reset.php">Forgot Password?</a>
                     <a id="sign_up_link" class="btn btn-link col-6 text-center" href="signup.php">Register</a>
                 </div>

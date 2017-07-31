@@ -118,11 +118,16 @@
                 }
                 ?>
 
+
                 <!-- <a type="button" class="btn btn-warning btn-lg btn-block" id="cancelButton" href="./">Cancel</a> -->
+                <!-- <a type="button" class="btn btn-danger btn-lg btn-block" id="deleteButton" href="./includes/deletethermo.inc.php?id=<?php echo $id; ?>">Delete</a> -->
 
-                <a type="button" class="btn btn-danger btn-lg btn-block" id="deleteButton" href="./includes/deletethermo.inc.php?id=<?php echo $id; ?>">Delete</a>
 
-                <a id="back-home-button" class="btn btn-link col-12 text-center" href="./">Cancel</a>
+                <!-- Removed the buttons and added regular links -->
+                <div class="row">
+                    <a class="btn btn-link col-6 text-center" id="deleteButton" href="./includes/deletethermo.inc.php?id=<?php echo $id; ?>">Delete</a>
+                    <a class="btn btn-link col-6 text-center" id="cancelButton" href="./">Cancel</a>
+                </div>
 
 
             </form>
