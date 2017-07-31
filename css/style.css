@@ -277,6 +277,11 @@ form h1 {
     padding: 0 50px;
 }
 
+#signUpButton:focus,
+#applyButton:focus {
+    box-shadow: none;
+}
+
 .on-label,
 .on-label:hover {
     background-color: #7EABFF;

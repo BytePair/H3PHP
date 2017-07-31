@@ -26,12 +26,12 @@
 
                 <div class="input-group">
                     <span class="input-group-addon"><i class="fa fa-key fa-fw" aria-hidden="true"></i></span>
-                    <input class="form-control" type="password" name="pwd" placeholder="Password" required />
+                    <input class="form-control" type="password" name="pwd" placeholder="Password" id="password1" required />
                 </div>
 
                 <div class="input-group">
                     <span class="input-group-addon"><i class="fa fa-key fa-fw" aria-hidden="true"></i></span>
-                    <input class="form-control" type="password" name="pwd2" placeholder="Verify Password" required />
+                    <input class="form-control" type="password" name="pwd2" placeholder="Verify Password" id="password2" required />
                 </div>
                 
                 <button type="submit" name="submit" class="btn btn-primary btn-lg btn-block" id="signUpButton">Register</button>
@@ -66,6 +66,34 @@
 
 </div>
 <!-- ./container-fluid -->
+
+<script>
+
+    /**
+     * Checks if passwords are matching
+     */
+
+
+    var pw1 = document.getElementById("password1");
+    var pw2 = document.getElementById("password2");
+
+    function validatePasswords() {
+        if (pw1.value === pw2.value) {
+            pw2.setCustomValidity("");
+        } else {
+            pw2.setCustomValidity("Passwords do not match");
+        }
+    }
+
+    pw1.addEventListener('change', function() {
+        validatePasswords();
+    });
+
+    pw2.addEventListener('keyup', function() {
+        validatePasswords();
+    });
+
+</script>
 
 <?php
     include_once 'footer.php';
