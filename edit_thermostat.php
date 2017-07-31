@@ -91,9 +91,17 @@
                     <input class="form-control" type="number" name="id_fake" placeholder="ID: <?php echo $id; ?>" required disabled />
                 </div>
 
+                <!--
                 <div class="input-group">
                     <span class="input-group-addon"><i class="fa fa-thermometer-three-quarters fa-fw" aria-hidden="true"></i></span>
                     <input class="form-control" type="number" name="setTemp" placeholder="Set Temperature: <?php echo $temp; ?>" />
+                </div>
+                -->
+
+                <div id="tempButtons" class="input-group text-center">
+                    <a id="tempDownButton" href="#" onclick="event.preventDefault();"><i class="fa fa-minus fa-2x" aria-hidden="true"></i></a>
+                    <input readonly id="tempInput" class="form-control text-center" type="text" name="setTemp" placeholder="<?php echo $temp; ?>" value="<?php echo $temp; ?>" />
+                    <a id="tempUpButton" href="#" onclick="event.preventDefault();"><i class="fa fa-plus fa-2x" aria-hidden="true"></i></a>
                 </div>
 
                 <label id="acCheckboxLabel">
@@ -140,6 +148,51 @@
 
 </div>
 <!-- ./container-fluid -->
+
+
+<script>
+
+    /**
+     * Change the temperature with the up and down buttons
+     */
+
+    var downButton = document.getElementById("tempDownButton");
+    var upButton = document.getElementById("tempUpButton");
+    var tempInput = document.getElementById("tempInput");
+
+    downButton.addEventListener("mouseup", function(e) {
+        var currentTemp = parseInt(tempInput.value);
+        if (currentTemp > 0) {
+            currentTemp -= 1;
+        }
+        tempInput.value = currentTemp;
+    });
+
+    downButton.addEventListener("touchend", function(e) {
+        var currentTemp = parseInt(tempInput.value);
+        if (currentTemp > 0) {
+            currentTemp -= 1;
+        }
+        tempInput.value = currentTemp;
+    });
+
+    upButton.addEventListener("mouseup", function(e) {
+        var currentTemp = parseInt(tempInput.value);
+        if (currentTemp < 100) {
+            currentTemp += 1;
+        }
+        tempInput.value = currentTemp;
+    });
+
+    upButton.addEventListener("touchend", function(e) {
+        var currentTemp = parseInt(tempInput.value);
+        if (currentTemp < 100) {
+            currentTemp += 1;
+        }
+        tempInput.value = currentTemp;
+    });
+
+</script>
 
 
 <?php

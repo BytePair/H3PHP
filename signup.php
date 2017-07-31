@@ -56,6 +56,7 @@
                 ?>
 
                 <a id="back-home-button" class="btn btn-link col-12 text-center" href="./">Cancel</a>
+
             </form>
 
         </div>
@@ -72,7 +73,6 @@
     /**
      * Checks if passwords are matching
      */
-
 
     var pw1 = document.getElementById("password1");
     var pw2 = document.getElementById("password2");

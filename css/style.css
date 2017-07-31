@@ -339,6 +339,37 @@ form h1 {
     border-color: #adadad;
 }
 
+#tempButtons {
+    width: 200px;
+    margin: 20px auto 10px auto;
+}
+
+#tempDownButton {
+    padding: 15px;
+    color: #880000;
+}
+
+#tempDownButton:active,
+#tempDownButton:hover {
+    padding: 15px;
+    color: #750000;
+}
+
+#tempUpButton {
+    padding: 15px;
+    color: #880000;
+}
+
+#tempUpButton:active,
+#tempUpButton:hover {
+    padding: 15px;
+    color: #750000;
+}
+
+#tempInput {
+    font-size: 2rem;
+}
+
 
 /* Footer */
 
