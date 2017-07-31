@@ -16,7 +16,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-    <title>H3</title>
+    <title>Thermosmart</title>
 
     <!-- Favicon -->
     <link rel="icon" href="./assets/favicon.ico" />
