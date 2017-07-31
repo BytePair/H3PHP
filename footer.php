@@ -17,7 +17,7 @@
 <footer>
     <div class="row">
         <div class="col-lg-12 text-center">
-            <p>Copyright &copy; H3 2017</p>
+            <p>Copyright &copy; Thermosmart 2017</p>
         </div>
 </footer>
 <!-- /.footer -->
