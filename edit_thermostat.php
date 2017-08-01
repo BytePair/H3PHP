@@ -160,7 +160,7 @@
     var upButton = document.getElementById("tempUpButton");
     var tempInput = document.getElementById("tempInput");
 
-    downButton.addEventListener("mouseup", function(e) {
+    downButton.addEventListener("click", function(e) {
         var currentTemp = parseInt(tempInput.value);
         if (currentTemp > 0) {
             currentTemp -= 1;
@@ -168,23 +168,7 @@
         tempInput.value = currentTemp;
     });
 
-    downButton.addEventListener("touchend", function(e) {
-        var currentTemp = parseInt(tempInput.value);
-        if (currentTemp > 0) {
-            currentTemp -= 1;
-        }
-        tempInput.value = currentTemp;
-    });
-
-    upButton.addEventListener("mouseup", function(e) {
-        var currentTemp = parseInt(tempInput.value);
-        if (currentTemp < 100) {
-            currentTemp += 1;
-        }
-        tempInput.value = currentTemp;
-    });
-
-    upButton.addEventListener("touchend", function(e) {
+    upButton.addEventListener("click", function(e) {
         var currentTemp = parseInt(tempInput.value);
         if (currentTemp < 100) {
             currentTemp += 1;
